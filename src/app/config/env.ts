@@ -38,6 +38,12 @@ interface EnvConfig {
     },
     SUPER_ADMIN_EMAIL: string;
     SUPER_ADMIN_PASSWORD: string;
+
+    RAG:{
+        OPENROUTE_API_KEY: string;
+        OPENROUTE_EMBEDDING_MODEL: string;
+        OPENROUTE_LLM_MODEL: string;
+    }
 }
 
 
@@ -114,6 +120,11 @@ const loadEnvVariables = (): EnvConfig => {
         },
         SUPER_ADMIN_EMAIL: process.env.SUPER_ADMIN_EMAIL as string,
         SUPER_ADMIN_PASSWORD: process.env.SUPER_ADMIN_PASSWORD as string,
+        RAG: {
+            OPENROUTE_API_KEY: process.env.OPENROUTE_API_KEY as string,
+            OPENROUTE_EMBEDDING_MODEL: process.env.OPENROUTE_EMBEDDING_MODEL as string,
+            OPENROUTE_LLM_MODEL: process.env.OPENROUTE_LLM_MODEL as string,
+        }
     }
 }
 
