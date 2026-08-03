@@ -1,10 +1,10 @@
 model DocumentEmbedded {
   id       String  @id @default(uuid(7))
+
   chunkKey String  @unique
   sourceType String
   sourceId   String
   sourceLabel String?
-
   content   String
   metadata Json?
 
