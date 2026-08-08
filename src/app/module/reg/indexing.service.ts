@@ -37,7 +37,7 @@ INSERT INTO "document_embedded"
   "updatedAt"
 )
 VALUES (
-  ${Prisma.raw("gen_random_uuid()")}
+  ${Prisma.raw("gen_random_uuid()")},
   ${chunkKey},
   ${sourceType},
   ${sourceId},
@@ -62,6 +62,7 @@ DO UPDATE SET
   `);
     } catch (error) {
       console.log(error);
+      throw new Error(`Error indexing document: ${error}`);
     }
   }
 
