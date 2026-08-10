@@ -76,7 +76,11 @@ const loadEnvVariables = (): EnvConfig => {
         'STRIPE_SECRET_KEY',
         'STRIPE_WEBHOOK_SECRET',
         'SUPER_ADMIN_EMAIL',
-        'SUPER_ADMIN_PASSWORD',
+        
+        // 'SUPER_ADMIN_PASSWORD',
+        // 'OPENROUTE_API_KEY',
+        // 'OPENROUTE_EMBEDDING_MODEL',
+        // 'OPENROUTE_LLM_MODEL'
     ]
 
     requireEnvVariable.forEach((variable) => {
